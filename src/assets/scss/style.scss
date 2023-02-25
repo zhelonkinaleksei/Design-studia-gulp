@@ -1,0 +1,65 @@
+@import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+@import '../../../node_modules/slick-slider/slick/slick.scss';
+@import '../../../node_modules/aos/src/sass/aos.scss';
+
+@import 'fonts';
+@import 'settings';
+
+
+html,body{
+  font-size: 10px;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.main{
+
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+
+body{
+  //background-color: $bg-color;
+  background: linear-gradient(351.48deg, #131313 32.96%, #404040 100.44%);
+  background-attachment: fixed;
+  color: $light-color;
+}
+
+#particles-js{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+  top:0;
+  left:0;
+  @include bg-cover;
+}
+
+
+
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/sectiontop';
+@import 'blocks/sectiontopcards';
+@import 'blocks/sectionnews';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/stages';
+@import 'blocks/services';
+@import 'blocks/stack';
+@import 'blocks/slider';
+@import 'blocks/popup';
+@import 'blocks/alert';
+@import 'blocks/breef';
+@import 'blocks/footer';
+
+
+
+
+
+

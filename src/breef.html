@@ -1,0 +1,132 @@
+---
+layout: second
+title: ABrosko
+---
+
+
+<section class="section__breef">
+    <div class="container">
+        <h1 class="section__breef-tille"><span>Бриф</span>-анкета</h1>
+        <div class="breef__title-details">
+            Brief можно перевести с английского как «резюме» или «краткая сводка». Бриф-анкета описывает суть проекта и
+            каких результатов ожидает заказчик.
+        </div>
+        <form action="https://formspree.io/f/mbjeoqda" id="form" class="breef__form" method="post" name="formbreef"
+            enctype="multipart/form-data">
+            <input type="hidden" name="admin_email[]" value="zhelonkinaleksei2710@gmail.com">
+            <input type="hidden" name="form_subject" value="Тема письма">
+            <div class="breef__form-item">
+                <label for="customer" class="form__item-title">Заказчик:</label>
+                <input tabindex="1" class="input__customer js-input" type="text" id="customer" name="customername"
+                    value="" placeholder="Обязательно для заполнения*" required >
+            </div>
+            <div class="breef__form-item">
+                <label for="activity" class="form__item-title">Вид деятельности компании и <span>ЦА:</span></label>
+                <textarea tabindex="2" class="textarea__activity js-textarea" name="detailsactivity" id="activity"
+                    placeholder="Обязательно для заполнения*" required></textarea>
+            </div>
+            <div class="contacts__customer">
+                <label for="contactcustomer" class="form__item-title">Контакты заказчика:</label>
+                <div class="contacts__customer-item">
+                    <input data-validate-field="email" tabindex="3" class="input__email js-input js-input-email"
+                        type="text" id="contactcustomer" name="customeremail" value="" placeholder="Email*" required>
+                    <input data-validate-field="tel" tabindex="4" class="input__tel js-input-phone" type="tel"
+                        id="contactcustomer" maxlength="11" name="customertel" value="" placeholder="Номер телефона" required>
+                </div>
+            </div>
+            <div class="breef__form-options">
+                <div class="custom__dropdown">
+                    <div tabindex="5" class="dropdown__button">Виды услуг</div>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="layout">Вёрстка</li>
+                        <li class="dropdown__list-item" data-value="key">Под ключ</li>
+                        <li class="dropdown__list-item" data-value="cms">CMS</li>
+                        <li class="dropdown__list-item" data-value="design">Дизайн</li>
+                        <li class="dropdown__list-item" data-value="copyright">Копирайтинг</li>
+                        <li class="dropdown__list-item" data-value="logo">Логотип</li>
+                        <li class="dropdown__list-item" data-value="seo">Продвижение</li>
+                    </ul>
+                    <input class="dropdown__input" type="text" name="typofservices" value=" ">
+                </div>
+                <div class="custom__dropdown">
+                    <div tabindex="6" class="dropdown__button dropdown__button-style">Выбор стиля</div>
+                    <ul class="dropdown__list ">
+                        <li class="dropdown__list-item" data-value="layout">Минимализм</li>
+                        <li class="dropdown__list-item" data-value="design">Креатив</li>
+                        <li class="dropdown__list-item" data-value="logo">Анимации</li>
+                        <li class="dropdown__list-item" data-value="copyright">Паралакс</li>
+                    </ul>
+                    <input class="dropdown__input" type="text" name="style" value=" ">
+                </div>
+                <div class="custom__dropdown">
+                    <div tabindex="7" class="dropdown__button dropdown__button-level">Уровень анимаций</div>
+                    <ul class="dropdown__list ">
+                        <li class="dropdown__list-item" data-value="layout">Простые</li>
+                        <li class="dropdown__list-item" data-value="design">Средние</li>
+                        <li class="dropdown__list-item" data-value="logo">Сложные</li>
+                        <li class="dropdown__list-item" data-value="copyright">Проф. уровень</li>
+                    </ul>
+                    <input class="dropdown__input" type="text" name="levelanimation" value="">
+                </div>
+                <div class="options-color"> Цвет
+                    <input tabindex="8" class="input__color" type="color" id="colorchoose" name="colorchoose" value="">
+                </div>
+            </div>
+            <div class="breef__form-bottom">
+                <div class="breef__form-comment">
+                    <label for="breefcomment" class="form__item-title">Комментарий к заказу:</label>
+                    <div class="counter-box">
+                        <textarea tabindex="9" maxlength="1000" class="textarea__comment js-textarea"
+                            name="breefcomment" id="breefcomment"
+                            placeholder="Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat."></textarea>
+                        <span class="counter-text">
+                            <span class="counter-text__current">0</span>
+                            /
+                            <span class="counter-text__total">1000 Символов</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="brief__form-attach">
+                    <label for="breefattach" class="form__item-title  ">Закрепленные файлы:</label>
+                    <div class="input__attach">
+                        <!-- onchange="return sizeInput()" -->
+                        <input class="input__attach-standart"  type="file" id="breefattach"
+                            name="file[]" multiple>
+                        <div id="filebutton" class="file__button">Прикрепить файл +</div>
+                        <div class="file__expansion">* txt, pdf, word, png, jpg</div>
+                    </div>
+                    <div class="preview__files" id="previewfiles"></div>
+                    <div class="clearfile">Очистить</div>
+                </div>
+            </div>
+            <div class="breef__form-send">
+                <div class="form__send-count">
+                    <span class="counter-file">Вес закрепленных файлов
+                        <span class="counter-size__current">0</span>
+                        Мб/
+                        <span class="counter-file__total">1Гб</span>
+                    </span>
+                </div>
+                <button class="form__send-button" type="submit">Отправить анкету</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div id="alert" class="alert">
+    <div class="container">
+        <div class="alert__body">
+            <div class="alert__content">
+                <div class="alert__cancel">
+                    <img src="./assets/images/popup/cross.svg" alt="cancel">
+                </div>
+                <div class="alert__message">
+                    <div class="alert__message-title">На сайте ведутся технические работы</div>
+                    <div class="alert__message-subtitle">Приносим свои извинения!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="particles-js"></div>

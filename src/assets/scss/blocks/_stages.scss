@@ -1,0 +1,364 @@
+.stages {
+    width: 100%;
+    height: 100%;
+}
+
+.accent-color {
+    transition: all 0.4s linear;
+}
+
+.stages__inner {
+    width: 100%;
+    margin-bottom: 11.8rem;
+
+    @include tablet {
+        margin-bottom: 4rem;
+    }
+}
+
+.stages__inner__title {
+    text-align: center;
+    font-family: 'Prosto';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 81px;
+    margin-bottom: 1.2rem;
+
+
+    @include mobile {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+}
+
+.stages__inner__subtitle {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto Flex';
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+    margin-bottom: -5rem;
+
+    @include tablet {
+        margin-bottom: 2rem;
+    }
+}
+
+.stages__inner__wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, 22.8rem);
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.stage__inner__wrapper__item {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid $light-color;
+    height: 22.8rem;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.stages__inner__wrapper__item__row__line {
+    height: 7rem;
+    width: 100%;
+    // background-color: $bg-color;
+    border: none;
+    margin-top: 0rem;
+    position: relative;
+    z-index: 1;
+
+
+    @include for-mefium-desktop {
+        height: 5rem;
+    }
+
+    @include for-desktop {
+        display: none;
+    }
+}
+
+.stages__inner__wrapper__item__digit {
+    grid-column: span 3;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 239px;
+    line-height: 289px;
+
+    -webkit-text-stroke: 2px $light-color;
+
+
+    @include big-desktop {
+        font-size: 20rem;
+        line-height: 28.9rem;
+    }
+
+    @include tablet {
+        grid-column: span 2;
+    }
+
+}
+
+.accent-color .stages__inner__wrapper__item__digit {
+    -webkit-text-stroke: 2px $accent-color;
+}
+
+.text__zero {
+    display: inline-block;
+    content: '';
+    width: 10rem;
+    height: 28.5rem;
+
+    @include big-desktop {
+        height: 27.5rem;
+        width: 8rem;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    position: relative;
+}
+
+.text__item {
+    display: inline-block;
+    letter-spacing: -6rem;
+    line-height: 40rem;
+    color: transparent;
+
+    @include for-desktop {
+        line-height: 30rem;
+    }
+}
+
+.text__zero__overflow {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 239px;
+    line-height: 40rem;
+
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 22.5rem;
+    width: 15rem;
+
+    @include big-desktop {
+        font-size: 20rem;
+    }
+}
+
+.text__stage__first {
+    color: $light-color;
+}
+
+.text__stage {
+    position: relative;
+    z-index: 2;
+    //padding-left: 10rem;
+}
+
+.accent-color .text__stage {
+    color: $accent-color;
+
+}
+
+.stages__inner__wrapper__item__title {
+    grid-column: span 3;
+    font-family: 'Prosto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-top: 10.9rem;
+
+    @include big-desktop {
+        font-size: 3rem;
+        margin-top: 11.9rem;
+
+    }
+
+    @include for-mefium-desktop {
+        &--last {
+            margin-top: 11.6rem;
+        }
+    }
+
+    @include for-desktop {
+        grid-column: 4/13;
+        margin-top: 7rem;
+        height: 5rem;
+        text-align: right;
+    }
+
+    @include tablet {
+        grid-column: 3/13;
+    }
+}
+
+.accent-color .stages__inner__wrapper__item__title {
+    color: $accent-color;
+
+}
+
+.stages__inner__wrapper__item__text {
+    grid-column: span 6;
+    max-width: 82rem;
+    font-family: 'RobotoFlex';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: right;
+    margin-top: 10.9rem;
+    letter-spacing: -0.6px;
+
+    @include big-desktop {
+        font-size: 2.2rem;
+        margin-top: 11.9rem;
+    }
+
+    @include for-mefium-desktop {
+        grid-column: 8/13;
+        font-size: 2rem;
+
+        &--last {
+            margin-top: 11.6rem;
+        }
+    }
+
+    @include for-desktop {
+        grid-column: 4/13;
+        margin-top: -20.5rem;
+    }
+
+    @include tablet {
+        grid-column: 3/13;
+    }
+}
+
+.stages__inner__wrapper__item__row__item__mobile {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 0px 7px #2DBE96;
+    margin-bottom: 3rem;
+    transition: all 0.8s linear;
+
+    &:active {
+        transform: translateY(-3rem);
+    }
+
+    @include tablet {
+        display: flex;
+        width: 90vw;
+    }
+}
+
+.stages__inner__wrapper__item__digit__mobile {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7rem;
+    padding-right: 0.5rem;
+    display: flex;
+
+    @include mobile {
+        font-size: 5rem;
+    }
+
+}
+
+.text__zero__mobile {
+    color: transparent;
+    -webkit-text-stroke: 1px $light-color;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.text__stage__mobile {
+    color: $accent-color;
+}
+
+.text__stage__first__mobile {}
+
+.stages__inner__wrapper__item__content__mobile {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stages__inner__wrapper__item__title__mobile {
+    font-family: 'Prosto';
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+    text-align: right;
+    padding-bottom: 0.8rem;
+    color: $accent-color;
+
+    @include tablet {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    @include small-tablet {
+        font-size: 2.2rem;
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}
+
+.stages__inner__wrapper__item__text__mobile {
+    font-family: 'RobotoFlex';
+    font-weight: 400;
+    font-size: 2.1rem;
+    text-align: right;
+
+    @include tablet {
+        font-size: 2.1rem;
+        line-height: 1.3;
+    }
+
+    @include small-tablet {
+        font-size: 1.9rem;
+    }
+
+    @include large-mobile-for-slider {
+        font-size: 1.7rem;
+    }
+
+    @include mobile {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+}

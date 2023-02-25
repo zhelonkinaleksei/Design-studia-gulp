@@ -1,0 +1,268 @@
+._lock {
+    overflow: hidden;
+}
+
+.header {
+    padding: 0px 10px;
+    transition: all 0.2s linear;
+    font-family: 'RobotoFlex';
+}
+
+.activebg {
+    background-color: rgba(24, 24, 24, 0.9);
+}
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(203, 203, 203, 1);
+}
+
+.header__nav {
+    width: 394px;
+    padding: 30.5px 0px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            a {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                display: flex;
+                align-items: center;
+                text-align: right;
+                color: #ffffff;
+                transition: all 0.3s ease 0s;
+
+                &:hover {
+                    color: #2DBE96;
+
+                }
+            }
+        }
+    }
+}
+
+.button__order-innernav {
+    display: none;
+}
+
+.menu__icon {
+    display: none;
+    position: relative;
+    height: 20px;
+    width: 30px;
+}
+
+.menu__icon span {
+    position: absolute;
+    background-color: #2DBE96;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+}
+
+.menu__icon::after,
+.menu__icon::before {
+    content: "";
+    background-color: #2DBE96;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 10%;
+    transition: all 0.3s ease 0s;
+
+}
+
+.menu__icon::before {
+    top: 0;
+}
+
+.menu__icon::after {
+    bottom: 0;
+}
+
+
+.header__logo {
+    font-family: 'RobotoFlex';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #ffffff;
+
+    span {
+        color: #2DBE96;
+    }
+}
+
+.button__order {
+    font-family: 'RobotoFlex';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-left: 150px;
+    transition: all 0.3s ease 0s;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5rem 2.15rem;
+    border-radius: 1.5rem;
+
+    &:hover {
+        color: #2DBE96;
+    }
+
+}
+
+._disable {
+    display: none;
+}
+
+
+@media(max-width:1440px) {
+    .header__nav {
+        width: 380px;
+    }
+
+    .header__logo {
+        font-size: 44px;
+    }
+
+    .button__order {
+        margin-left: 120px;
+
+    }
+}
+
+@media(max-width:992px) {
+    .header__nav {
+        width: 310px;
+
+        ul li a {
+            font-size: 14px;
+        }
+    }
+
+    .header__logo {
+        font-size: 38px;
+    }
+
+    .button__order {
+        margin-left: 30px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .header__nav {
+        position: fixed;
+        margin-top: 60px;
+        top: 0;
+        left: -150%;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        padding: 0px;
+        padding-top: 70px;
+        transition: all 0.3s ease 0s;
+        background-color: rgba(24, 24, 24, 0.9);
+
+        ul {
+            flex-direction: column;
+
+            li {
+                padding: 25px 0px;
+                margin: 0px auto;
+
+                &:last-child {
+                    padding: 20px 30px;
+                    margin-top: 5rem;
+                }
+
+                a {
+                    color: #ffffff;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .button__order-innernav {
+        display: block;
+        border-radius: 10px;
+        border: 1px solid #FFFFFF;
+        transition: all 0.2s ease 0s;
+
+        &:active {
+            color: #2DBE96;
+            border: 1px solid #2DBE96;
+        }
+    }
+
+    .menu__icon {
+        display: block;
+    }
+
+    ._active {
+
+        &::after,
+        &::before {
+            background-color: #2DBE96;
+        }
+    }
+
+    ._active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    ._active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    ._active span {
+        transform: scale(0);
+    }
+
+    ._actived {
+        left: 0px;
+    }
+
+    .header__logo {
+        font-size: 32px;
+    }
+
+    .button__order {
+        margin-left: 0px;
+        font-size: 12px;
+        display: none;
+    }
+}
+
+@media(max-width:426px) {
+    .header__logo {
+        font-size: 28px;
+    }
+
+    .button__order {
+        margin-left: 0px;
+        font-size: 11px;
+    }
+
+    .header {
+        padding: 0px 0px;
+    }
+}

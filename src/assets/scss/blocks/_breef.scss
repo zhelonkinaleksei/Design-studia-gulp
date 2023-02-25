@@ -1,0 +1,1491 @@
+/*---------------------------breef--------------------------------------------*/
+.section__breef {
+    font-family: RobotoFlex;
+    color: #ffffff;
+    font-style: normal;
+    margin-top: 95px;
+    position: relative;
+}
+.section__breef-tille {
+    font-family: 'Prosto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 100%;
+    margin-bottom: 128px;
+    max-width: 727px;
+    span{
+        color: #2DBE96;
+    }
+}
+.breef__form {
+    max-width: 1448px;
+    margin: 0 auto;
+}
+.error{
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 0px 20px  #a30f0f;
+    border-radius: 20px;
+
+}
+.breef__form-item {
+    margin-bottom: 72px;
+    display: flex;
+    column-gap: 20px;
+    flex-direction: column;
+    row-gap: 36px;
+}
+.breef__title-details{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 147%;
+    max-width: 470px;
+    padding: 20px 16px;
+    border: 2px solid #2DBE96;
+    border-right: 0px;
+    border-radius: 20px 0px 0px 20px;
+    position:  fixed;
+    right: -940px;
+    top:170px;
+    transition: all 0.3s ease 0s;
+    opacity: 0%;
+    background-color: #292929;
+    z-index: 5;
+    
+}
+.breef__title-details-active{
+    right: 0px;
+    opacity: 1;
+   
+}
+
+
+.form__item-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 116%;
+    span{
+        color: #2DBE96;
+    }
+}
+
+.input__customer {
+    background-color: #ffffff00;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-left: 20px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease 0s;
+    &:focus,
+    &:hover{
+        border-bottom: 1px solid #2DBE96;
+    }
+}
+.textarea__activity {
+    background-color: #ffffff00;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.7);
+    height: 135px;
+    transition: all 0.3s ease 0s;
+    &:focus,
+    &:hover{
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    }
+}
+
+
+.contacts__customer-item {
+    margin-top: 36px;
+    display: flex;
+    column-gap: 131px;
+}
+.input__email {
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color: #ffffff00;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-left: 20px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease 0s;
+    &:focus,
+    &:hover{
+        border-bottom: 1px solid #2DBE96;
+
+    }
+}
+.input__tel {
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color: #ffffff00;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-left: 20px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease 0s;
+    &:focus,
+    &:hover{
+        border-bottom: 1px solid #2DBE96;
+    }
+
+}
+
+
+.breef__form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+  
+}
+
+
+.custom__dropdown{
+    position: relative;
+}
+
+.dropdown__button{
+    position: relative;
+    cursor: pointer;
+    background-color: #ffffff00;
+    font-size: 25px; 
+    font-weight: 500; 
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px; 
+    padding: 7px 45px 7px 30px; 
+    width: 233px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7) ;
+    appearance: none;
+    &::after{
+        content: url("../images/breef/select.png");
+        position: absolute;
+        width: 20px;
+        height: 12.76px;
+        right: 22px;
+        top: 6px;
+    }
+    transition: all 0.3s ease 0s;
+    &:focus,
+    &:hover{
+        color: #2DBE96;
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    }
+}
+.dropdown__button-style{
+    width: 250px;
+}
+.dropdown__button-level{
+    width: 320px;
+}
+
+.dropdown__list {
+    opacity: 0%;
+    visibility:hidden;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color:  rgb(43, 43, 43);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.7) ;
+    border-radius: 20px;
+    font-size: 24px; 
+    font-weight: 500; 
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px; 
+    padding: 12px 0px 12px 30px; 
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+   
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    } 
+}
+
+.dropdown__list-item {
+    &:not(:first-child){
+        padding-top: 10px; 
+        
+    }
+    transition: all 0.3s ease 0s;
+    &:hover {
+        color: #2DBE96;
+    } 
+    
+}
+
+.dropdown__input{
+    display: none;
+}
+
+.dropdown__list-active{
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+   
+}
+
+
+.options-color{
+        cursor: pointer;
+        position: relative;
+        background-color: #ffffff00;
+        font-size: 24px; 
+        font-weight: 500; 
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 28px; 
+        padding: 7px 45px 7px 30px; 
+        width: 200px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.7) ;
+        appearance: none;
+        transition: all 0.3s ease 0s;
+        &:focus,
+        &:hover{
+            color: #2DBE96;
+            border: 1px solid #2DBE96;
+            box-shadow: 0px 0px 10px #2DBE96;
+    
+        }
+        &::after{
+            content:"";
+            position: absolute;
+            width: 30px;
+            height: 27px;
+            border: 4px solid rgba(184, 184, 184, 0.7) ;
+            z-index: 4;
+            top: 8px;
+            right:30px;
+
+        }
+    }  
+       
+
+.input__color{
+        position: absolute;
+        z-index: -4;
+        top: 8px;
+        left: 140px;
+        cursor: pointer;
+        width: 30px;
+        height: 27px;
+        
+       
+  
+}
+
+.breef__form-bottom{
+    display: flex;
+    column-gap: 21px;
+    margin-top: 72px;
+
+}
+
+.breef__form-comment{
+    flex: 1 1 896px;
+    display: flex;
+    flex-direction: column;
+    textarea{
+        width: 100%;
+    }
+}
+
+.counter-box{
+    position: relative;
+    display: inline-block;
+  }
+
+  .counter-text{
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.textarea__comment{
+    margin-top: 16px;
+    background-color: #ffffff00;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 24px 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 116%;
+    color: rgba(255, 255, 255, 0.7);
+    height: 400px;
+    &:focus{
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    }
+
+}
+
+.brief__form-attach {
+    flex: 1 0 525px;
+}
+
+.input__attach-standart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.input__attach {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 34px;
+}
+.file__button {
+    background-color: #ffffff00;
+    font-size: 24px; 
+    font-weight: 500; 
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px; 
+    padding: 7px 0px 7px 30px; 
+    width: 288px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7) ;
+    margin-top: 16px;
+    &:hover {
+        color: #2DBE96;
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    } 
+}
+
+.file__expansion {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.clearfile {
+    cursor: pointer;
+    background-color: #ffffff00;
+    font-size: 24px; 
+    font-weight: 500; 
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 165px;
+    line-height: 28px;
+    text-align: center; 
+    padding: 7px 0px 7px 0px; 
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7) ;
+    &:hover {
+        color: #2DBE96;
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    } 
+}
+
+.preview__files{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 18px; 
+    font-weight: 500; 
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px; 
+    height: 275px;
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid #9c9c9c;
+    overflow-y: auto;
+
+}
+
+.breef__form-send {
+    margin-top: 72px;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.form__send-count {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2DBE96;
+}
+
+.form__send-button {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7) ;
+    text-align: center;
+    background-color: #ffffff00;
+    padding: 18px 0px;
+    width: 384px;
+    &:hover {
+        color: #2DBE96;
+        border: 1px solid #2DBE96;
+        box-shadow: 0px 0px 10px #2DBE96;
+    } 
+
+}
+
+@media(max-width:1446px){
+    .section__breef-tille {
+        font-size: 90px;
+        margin-bottom: 120px;
+    }
+    .breef__form-item {
+        margin-bottom: 66px;
+        column-gap: 20px;
+        row-gap: 36px;
+    }
+    .breef__title-details{
+        font-size: 16px;
+        max-width: 470px;
+        padding: 20px 16px;
+    }
+
+    .form__item-title {
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 116%;
+        span{
+            color: #2DBE96;
+        }
+    }
+    
+    .input__customer {
+        font-size: 24px;
+    
+    }
+    .textarea__activity {
+        font-size: 24px;
+    }
+    .contacts__customer-item {
+        margin-top: 32px;
+        column-gap: 120px;
+    }
+    .input__email {
+        font-size: 24px;
+    }
+    .input__tel {
+        font-size: 24px;
+    } 
+    .breef__form-options {
+        margin-top: 66px;
+    }
+    .dropdown__button{
+        font-size: 25px; 
+        padding: 7px 45px 7px 30px; 
+        width: 233px;
+    }
+    .dropdown__button-style{
+        width: 250px;
+    }
+    .dropdown__button-level{
+        width: 320px;
+    }
+    
+    .dropdown__list {
+        font-size: 24px; 
+    }
+    
+    .dropdown__list-active{
+        top: 50px;
+    }
+    
+    .options-color{
+            font-size: 24px; 
+            width: 200px;
+            background-repeat: no-repeat;
+            background-position: 155px 16.43px;
+            background-size: 20px 12.76px;  
+        }  
+           
+    
+    .input__color{
+            top: 8px;
+            left: 140px;
+            width: 30px;
+            height: 27px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 66px;
+    }
+    
+      .counter-text{
+        right: 16px;
+        bottom: 16px;
+        font-size: 20px;
+    }
+    
+    .textarea__comment{
+        padding: 24px 16px;
+        font-size: 22px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 525px;
+    }
+
+    .input__attach {
+        column-gap: 25px;
+    }
+    .file__button {
+        font-size: 24px; 
+        width: 288px;
+        margin-top: 16px;
+    }
+    
+    .file__expansion {
+        font-size: 16px;
+    }
+    
+    .clearfile {
+        font-size: 24px; 
+        max-width: 165px;
+    }
+    
+    .preview__files{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 18px; 
+        height: 275px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top: 66px;
+        margin-bottom: 66px;
+    }
+    .form__send-count {
+        font-size: 24px;
+    }
+    
+    .form__send-button {
+        font-size: 24px;
+        padding: 18px 0px;
+        width: 384px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 457px;
+    }
+    
+    
+}
+
+@media(max-width:1210px){
+    .section__breef{
+        margin-top: 70px;
+    }
+    .section__breef-tille {
+        font-size: 80px;
+        margin-bottom: 90px;
+    }
+    .breef__form-item {
+        margin-bottom: 56px;
+        row-gap: 30px;
+    }
+    .breef__title-details{
+        font-size: 14px;
+        max-width: 470px;
+        padding: 16px 16px;
+        top:150px;
+    }
+
+    .form__item-title {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    
+    .input__customer {
+        font-size: 20px;
+    
+    }
+    .textarea__activity {
+        font-size: 20px;
+    }
+    .contacts__customer-item {
+        margin-top: 30px;
+        column-gap: 100px;
+    }
+    .input__email {
+        font-size: 20px;
+    }
+    .input__tel {
+        font-size: 20px;
+    } 
+    .breef__form-options {
+        margin-top: 56px;
+    }
+    .dropdown__button{
+        font-size: 21px; 
+        padding: 7px 45px 6px 20px; 
+        width: 213px;
+        &::after{
+            width: 10px;
+            height: 8px;
+            right: 22px;
+            top: 8px;
+        }
+    }
+    .dropdown__button-style{
+        width: 230px;
+    }
+    .dropdown__button-level{
+        width: 270px;
+    }
+    
+    .dropdown__list {
+        font-size: 20px; 
+    }
+    
+    .dropdown__list-active{
+        top: 50px;
+    }
+    
+    .options-color{
+            font-size: 21px; 
+            width: 180px;
+            &::after{
+                top: 8px;
+                right:30px;
+
+            }
+        }  
+           
+    
+    .input__color{
+            top: 8px;
+            left: 120px;
+            width: 30px;
+            height: 27px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 60px;
+    }
+    
+      .counter-text{
+        right: 16px;
+        bottom: 16px;
+        font-size: 16px;
+    }
+    
+    .textarea__comment{
+        padding: 24px 16px;
+        font-size: 18px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 450px;
+    }
+
+    .input__attach {
+        column-gap: 25px;
+    }
+    .file__button {
+        font-size: 20px; 
+        width: 248px;
+        margin-top: 16px;
+    }
+    
+    .file__expansion {
+        font-size: 14px;
+    }
+    
+    .clearfile {
+        font-size: 20px; 
+        max-width: 165px;
+    }
+    
+    .preview__files{
+        margin-top: 16px;
+        margin-bottom: 21px;
+        font-size: 14px; 
+        height: 275px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top: 66px;
+        margin-bottom: 66px;
+    }
+    .form__send-count {
+        font-size: 20px;
+    }
+    
+    .form__send-button {
+        font-size: 20px;
+        padding: 16px 0px;
+        width: 344px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 457px;
+    }
+    
+    
+}
+
+@media(max-width:992px){
+    .section__breef{
+        margin-top: 50px;
+    }
+    .section__breef-tille {
+        font-size: 65px;
+        margin-bottom: 60px;
+    }
+    .breef__form-item {
+        margin-bottom: 46px;
+        row-gap: 22px;
+    }
+    .breef__title-details{
+        font-size: 14px;
+        max-width: 420px;
+        padding: 16px 16px;
+        top:130px;
+    }
+
+    .form__item-title {
+        font-weight: 500;
+        font-size: 30px;
+    }
+    
+    .input__customer {
+        font-size: 16px;
+        padding-left: 10px;
+    
+    }
+    .textarea__activity {
+        font-size: 16px;
+        padding-left: 10px;
+        height: 100px;
+    }
+    .contacts__customer-item {
+        margin-top: 30px;
+        column-gap: 60px;
+    }
+    .input__email {
+        font-size: 16px;
+    }
+    .input__tel {
+        font-size: 16px;
+    } 
+    .breef__form-options {
+        margin-top: 46px;
+    }
+    .dropdown__button{
+        font-size: 17px; 
+        padding: 7px 45px 6px 16px; 
+        width: 180px;
+        &::after{
+            content: url("../images/breef/selectmini.png");
+            position: absolute;
+            width: 10px;
+            height: 12.76px;
+            right: 22px;
+            top: 6px;
+        }
+    }
+    .dropdown__button-style{
+        width: 180px;
+    }
+    .dropdown__button-level{
+        width: 225px;
+    }
+    
+    .dropdown__list {
+        font-size: 16px; 
+        padding-left: 16px;
+    }
+    .dropdown__list-item {
+        &:not(:first-child){
+            padding-top: 3px; 
+        }
+
+    }
+    
+    .dropdown__list-active{
+        top: 50px;
+    }
+    
+    .options-color{
+            font-size: 17px; 
+            width: 130px;
+            background-position: 130px 14.43px;
+            background-size: 20px 12.76px;  
+            &::after{
+                content:"";
+                position: absolute;
+                width: 25px;
+                height: 22px;
+                top: 10px;
+                right:18px;
+    
+            }
+        }  
+           
+    
+    .input__color{
+            top: 10px;
+            left: 85px;
+            width: 25px;
+            height: 25px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 45px;
+    }
+    
+      .counter-text{
+        right: 10px;
+        bottom: 10px;
+        font-size: 13px;
+    }
+    
+    .textarea__comment{
+        padding: 12px 12px;
+        font-size: 14px;
+        height: 310px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 400px;
+    }
+
+    .input__attach {
+        column-gap: 25px;
+    }
+    .file__button {
+        font-size: 16px; 
+        width: 208px;
+        margin-top: 16px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+    }
+    
+    .file__expansion {
+        font-size: 12px;
+    }
+    
+    .clearfile {
+        font-size: 16px; 
+        max-width: 145px;
+    }
+    
+    .preview__files{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: 14px; 
+        height: 205px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .form__send-count {
+        font-size: 16px;
+        height: 28px;
+    }
+    
+    .form__send-button {
+        font-size: 16px;
+        padding: 10px 0px;
+        width: 250px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 457px;
+    }
+    
+    
+}
+
+
+@media(max-width:831px){
+    .section__breef{
+        margin-top: 40px;
+    }
+    .section__breef-tille {
+        font-size: 54px;
+        margin-bottom: 45px;
+    }
+    .breef__form-item {
+        margin-bottom: 20px;
+        row-gap: 16px;
+    }
+    .breef__title-details{
+        display: none;
+    }
+
+    .form__item-title {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    .input__customer {
+        font-size: 12px;
+        padding-left: 6px;
+    
+    }
+    .textarea__activity {
+        font-size: 12px;
+        padding-left: 6px;
+        height: 80px;
+    }
+    .contacts__customer-item {
+        margin-top: 20px;
+        column-gap: 40px;
+    }
+    .input__email {
+        font-size: 12px;
+    }
+    .input__tel {
+        font-size: 12px;
+    } 
+    .breef__form-options {
+        margin-top: 30px;
+    }
+    .dropdown__button{
+        font-size: 13px; 
+        padding: 2px 45px 2px 16px; 
+        width: 140px;
+        &::after{
+            width: 12px;
+            height: 8.76px;
+            right: 16px;
+            top: 3px;
+        }
+    }
+    .dropdown__button-style{
+        width: 140px;
+    }
+    .dropdown__button-level{
+        width: 185px;
+    }
+    
+    .dropdown__list {
+        font-size: 14px; 
+        top: 38px;
+    }
+  
+    .options-color{
+            padding: 2px 45px 2px 16px; 
+            font-size: 13px; 
+            width: 100px;
+            background-position: 100px 12.43px;
+            background-size: 14px 8px; 
+            &::after{
+                content:"";
+                position: absolute;
+                width: 20px;
+                height: 16px;
+                border: 2px solid rgba(184, 184, 184, 0.7) ;
+                z-index: 4;
+                top: 10px;
+                right:18px;
+    
+            } 
+    }
+           
+    
+    .input__color{
+            top: 6px;
+            left: 60px;
+            width: 20px;
+            height: 22px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 35px;
+    }
+    
+      .counter-text{
+        right: 10px;
+        bottom: 10px;
+        font-size: 11px;
+    }
+    
+    .textarea__comment{
+        padding: 10px;
+        font-size: 12px;
+        height: 250px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 300px;
+    }
+
+    .input__attach {
+        column-gap: 18px;
+    }
+    .file__button {
+        font-size: 13px; 
+        width: 148px;
+        margin-top: 16px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 14px;
+    }
+    
+    .file__expansion {
+        font-size: 10px;
+    }
+    
+    .clearfile {
+        font-size: 12px; 
+        max-width: 115px;
+        padding: 0px;
+    }
+    
+    .preview__files{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: 14px; 
+        height: 165px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .form__send-count {
+        font-size: 12px;
+        height: 24px;
+    }
+    
+    .form__send-button {
+        font-size: 12px;
+        padding: 2px 0px;
+        width: 170px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 357px;
+    }
+    
+    
+}
+@media(max-width:659px){
+    .section__breef{
+        margin-top: 30px;
+    }
+    .section__breef-tille {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .breef__form-item {
+        margin-bottom: 20px;
+        row-gap: 12px;
+    }
+    .form__item-title {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    .input__customer {
+        font-size: 12px;
+        padding-left: 6px;
+    
+    }
+    .textarea__activity {
+        font-size: 12px;
+        padding-left: 6px;
+        height: 80px;
+    }
+    .contacts__customer-item {
+        margin-top: 20px;
+        column-gap: 25px;
+    }
+    .input__email {
+        font-size: 12px;
+    }
+    .input__tel {
+        font-size: 12px;
+    } 
+    .breef__form-options {
+        margin-top: 25px;
+    }
+    .dropdown__button{
+        font-size: 11px; 
+        padding: 0px 25px 0px 12px; 
+        width: 110px;
+        &::after{
+            width: 12px;
+            height: 8.76px;
+            right: 16px;
+            top: 1px;
+        }
+    }
+    .dropdown__button-style{
+        width: 115px;
+    }
+    .dropdown__button-level{
+        width: 145px;
+    }
+    
+    .dropdown__list {
+        font-size: 12px; 
+        top: 38px;
+    }
+    .dropdown__list-item{
+        font-size: 12px;
+        padding-top: 0px;
+    }
+  
+    .options-color{
+            padding: 0px 25px 0px 16px; 
+            font-size: 11px; 
+            width: 80px;
+            background-position: 80px 11.43px;
+            background-size: 14px 8px; 
+            &::after{
+                content:"";
+                position: absolute;
+                width: 13px;
+                height: 12px;
+                border: 1px solid rgba(184, 184, 184, 0.7) ;
+                z-index: 4;
+                top: 9px;
+                right:14px;
+    
+            } 
+    }
+           
+    
+    .input__color{
+            top: 6px;
+            left: 50px;
+            width: 16px;
+            height: 18px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 25px;
+    }
+    
+      .counter-text{
+        right: 10px;
+        bottom: 10px;
+        font-size: 9px;
+    }
+    
+    .textarea__comment{
+        padding: 10px;
+        font-size: 10px;
+        height: 180px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 250px;
+    }
+
+    .input__attach {
+        column-gap: 18px;
+    }
+    .file__button {
+        font-size: 11px; 
+        width: 128px;
+        margin-top:10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 12px;
+    }
+    
+    .file__expansion {
+        font-size:8px;
+    }
+    
+    .clearfile {
+        font-size: 10px; 
+        max-width: 85px;
+        padding: 0px;
+    }
+    
+    .preview__files{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 14px; 
+        height: 108px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+    .form__send-count {
+        font-size: 10px;
+        height: 20px;
+    }
+    
+    .form__send-button {
+        font-size: 10px;
+        padding: 0px;
+        width: 130px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 307px;
+    }
+    
+    
+}
+
+@media(max-width:549px){
+    .section__breef{
+        margin-top: 25px;
+    }
+    .section__breef-tille {
+        font-size:36px;
+        margin-bottom: 25px;
+    }
+    .breef__form-item {
+        margin-bottom: 15px;
+        row-gap: 10px;
+    }
+    .form__item-title {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .input__customer {
+        font-size: 10px;
+        padding-left: 6px;
+    
+    }
+    .textarea__activity {
+        font-size: 10px;
+        padding-left: 6px;
+        height: 80px;
+    }
+    .contacts__customer-item {
+        margin-top: 15px;
+        row-gap: 20px;
+        flex-direction: column;
+    }
+    .input__email {
+        font-size: 12px;
+    }
+    .input__tel {
+        font-size: 12px;
+    } 
+    .breef__form-options {
+        margin-top: 25px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 15px;
+        column-gap: 20px;
+
+    }
+ 
+    .dropdown__button{
+        flex: 1 1 50%;
+        font-size: 11px; 
+        padding: 0px 25px 0px 12px; 
+        width: 110px;
+        &::after{
+            width: 12px;
+            height: 8.76px;
+            right: 16px;
+            top: 1px;
+        }
+    }
+    .dropdown__button-style{
+        width: 115px;
+    }
+    .dropdown__button-level{
+        width: 145px;
+    }
+    
+    .dropdown__list {
+        font-size: 12px; 
+        top: 38px;
+    }
+    .dropdown__list-item{
+        font-size: 12px;
+        padding-top: 0px;
+    }
+  
+    .options-color{
+            padding: 0px 25px 0px 16px; 
+            font-size: 11px; 
+            width: 110px;
+            background-position: 80px 11.43px;
+            background-size: 14px 8px; 
+            &::after{
+                content:"";
+                position: absolute;
+                width: 13px;
+                height: 12px;
+                border: 1px solid rgba(184, 184, 184, 0.7) ;
+                z-index: 4;
+                top: 9px;
+                right:14px;
+    
+            } 
+    }
+           
+    
+    .input__color{
+            top: 6px;
+            left: 80px;
+            width: 16px;
+            height: 18px;
+    }
+    
+    .breef__form-bottom{
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+    
+      .counter-text{
+        right: 10px;
+        bottom: 10px;
+        font-size: 9px;
+    }
+    
+    .textarea__comment{
+        padding: 10px;
+        font-size: 10px;
+        height: 180px;
+    }
+    
+    .brief__form-attach {
+        flex: 1 0 250px;
+        margin-top: 2rem;
+    }
+
+    .input__attach {
+        column-gap: 18px;
+    }
+    .file__button {
+        font-size: 11px; 
+        width: 128px;
+        margin-top:10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 12px;
+    }
+    
+    .file__expansion {
+        font-size:8px;
+    }
+    
+    .clearfile {
+        font-size: 10px; 
+        max-width: 85px;
+        padding: 0px;
+    }
+    
+    .preview__files{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 14px; 
+        height: 108px;
+        padding: 16px;
+    }
+    
+    .breef__form-send {
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+    .form__send-count {
+        font-size: 10px;
+        height: 20px;
+    }
+    
+    .form__send-button {
+        font-size: 10px;
+        padding: 0px;
+        width: 130px;
+    }
+    .form__item-title-attach{
+        flex: 0 0 307px;
+    }
+    
+    
+}
+
+@media(max-width:439px){
+    .dropdown__button{
+        width: 145px;
+     
+    }
+    .dropdown__button-style{
+        width: 115px;
+    }
+    .dropdown__button-level{
+        width: 145px;
+    }
+  
+    .options-color{
+            padding: 0px 25px 0px 16px; 
+            font-size: 11px; 
+            width: 115px;
+            background-position: 80px 11.43px;
+            background-size: 14px 8px; 
+            &::after{
+                content:"";
+                position: absolute;
+                width: 13px;
+                height: 12px;
+                border: 1px solid rgba(184, 184, 184, 0.7) ;
+                z-index: 4;
+                top: 9px;
+                right:14px;
+    
+            } 
+    }
+           
+    
+    .input__color{
+            top: 6px;
+            left: 85px;
+            width: 16px;
+            height: 18px;
+    }
+
+}
+
+@media(max-width:350px){
+    .counter-file{
+        font-size:8px;
+    }
+}
+
+
+
+  
+
+
+
+  

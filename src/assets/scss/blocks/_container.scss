@@ -1,0 +1,21 @@
+
+.container{
+    width: 100%;
+    max-width: 158rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.container__fluid {
+    max-width: 1590px;
+    margin: 0px auto;
+    padding: 0px 15px;  
+    position: relative;
+    min-height: 100%;
+}
+.container__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
