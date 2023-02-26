@@ -1,4 +1,5 @@
 //====================================alert===========================
+/*-------------------------------test__comment--------------------------------*/
 
 export function alertButton() {
     const alert = document.querySelector('.alert');
