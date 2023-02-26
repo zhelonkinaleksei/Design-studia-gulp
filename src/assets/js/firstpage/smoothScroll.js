@@ -1,4 +1,5 @@
 export function scroll(){
+    const menuIcon = document.querySelector(".menu__icon");
     const headerNav = document.querySelector('.header__nav');
     const header = document.querySelector('.header');
     const linksItems = document.querySelectorAll('.header__nav__item');
@@ -19,6 +20,7 @@ export function scroll(){
                 headerNav.classList.remove('_actived');
                 header.classList.remove('activebg');
                 body.classList.remove('_lock');
+                menuIcon.classList.remove("_active");
             }
             
            // console.log(targetlink);

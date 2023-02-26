@@ -14,7 +14,9 @@ export function burger() {
         menuIcon.addEventListener("click", function (e) {
             menuIcon.classList.toggle("_active");
             headMenu.classList.toggle("_actived");
-            buttonOrder.classList.toggle("_disable");
+            if (buttonOrder !== null){
+                buttonOrder.classList.toggle("_disable");
+            }
             header.classList.toggle('activebg');
 
             document.body.classList.toggle("_lock");

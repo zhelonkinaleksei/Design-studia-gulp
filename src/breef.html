@@ -13,25 +13,23 @@ title: ABrosko
         </div>
         <form action="https://formspree.io/f/mbjeoqda" id="form" class="breef__form" method="post" name="formbreef"
             enctype="multipart/form-data">
-            <input type="hidden" name="admin_email[]" value="zhelonkinaleksei2710@gmail.com">
-            <input type="hidden" name="form_subject" value="Тема письма">
             <div class="breef__form-item">
                 <label for="customer" class="form__item-title">Заказчик:</label>
                 <input tabindex="1" class="input__customer js-input" type="text" id="customer" name="customername"
-                    value="" placeholder="Обязательно для заполнения*" required >
+                    value="" placeholder="Обязательно для заполнения*" >
             </div>
             <div class="breef__form-item">
                 <label for="activity" class="form__item-title">Вид деятельности компании и <span>ЦА:</span></label>
                 <textarea tabindex="2" class="textarea__activity js-textarea" name="detailsactivity" id="activity"
-                    placeholder="Обязательно для заполнения*" required></textarea>
+                    placeholder="Обязательно для заполнения*" ></textarea>
             </div>
             <div class="contacts__customer">
                 <label for="contactcustomer" class="form__item-title">Контакты заказчика:</label>
                 <div class="contacts__customer-item">
                     <input data-validate-field="email" tabindex="3" class="input__email js-input js-input-email"
-                        type="text" id="contactcustomer" name="customeremail" value="" placeholder="Email*" required>
+                        type="text" id="contactcustomer" name="customeremail" value="" placeholder="Email*" >
                     <input data-validate-field="tel" tabindex="4" class="input__tel js-input-phone" type="tel"
-                        id="contactcustomer" maxlength="11" name="customertel" value="" placeholder="Номер телефона" required>
+                        id="contactcustomer" maxlength="11" name="customertel" value="" placeholder="Номер телефона" >
                 </div>
             </div>
             <div class="breef__form-options">
@@ -51,20 +49,20 @@ title: ABrosko
                 <div class="custom__dropdown">
                     <div tabindex="6" class="dropdown__button dropdown__button-style">Выбор стиля</div>
                     <ul class="dropdown__list ">
-                        <li class="dropdown__list-item" data-value="layout">Минимализм</li>
-                        <li class="dropdown__list-item" data-value="design">Креатив</li>
-                        <li class="dropdown__list-item" data-value="logo">Анимации</li>
-                        <li class="dropdown__list-item" data-value="copyright">Паралакс</li>
+                        <li class="dropdown__list-item" data-value="minimal">Минимализм</li>
+                        <li class="dropdown__list-item" data-value="create">Креатив</li>
+                        <li class="dropdown__list-item" data-value="animate">Анимации</li>
+                        <li class="dropdown__list-item" data-value="parallaxt">Паралакс</li>
                     </ul>
                     <input class="dropdown__input" type="text" name="style" value=" ">
                 </div>
                 <div class="custom__dropdown">
                     <div tabindex="7" class="dropdown__button dropdown__button-level">Уровень анимаций</div>
                     <ul class="dropdown__list ">
-                        <li class="dropdown__list-item" data-value="layout">Простые</li>
-                        <li class="dropdown__list-item" data-value="design">Средние</li>
-                        <li class="dropdown__list-item" data-value="logo">Сложные</li>
-                        <li class="dropdown__list-item" data-value="copyright">Проф. уровень</li>
+                        <li class="dropdown__list-item" data-value="easy">Простые</li>
+                        <li class="dropdown__list-item" data-value="middle">Средние</li>
+                        <li class="dropdown__list-item" data-value="difficult">Сложные</li>
+                        <li class="dropdown__list-item" data-value="profi">Проф. уровень</li>
                     </ul>
                     <input class="dropdown__input" type="text" name="levelanimation" value="">
                 </div>
@@ -78,7 +76,7 @@ title: ABrosko
                     <div class="counter-box">
                         <textarea tabindex="9" maxlength="1000" class="textarea__comment js-textarea"
                             name="breefcomment" id="breefcomment"
-                            placeholder="Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat.Логотип должен быть выполнен в стиле HI-Tech; Основной шрифт возьмем Montserrat."></textarea>
+                            placeholder="Введите текст"></textarea>
                         <span class="counter-text">
                             <span class="counter-text__current">0</span>
                             /
