@@ -30,14 +30,18 @@
 }
 
 .services__inner__wrapper__item {
+    width: 33.3%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 
     @include large-desktop{
-        margin: 0 auto 4rem;
+        margin-bottom:  4rem;
     }
 
     @include for-mefium-desktop-servise{
+        width: 45%;
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 2rem;
         padding: 1rem 1.5rem;
@@ -55,21 +59,51 @@
         }
     }
 
-    @include mobile{
-        padding: 1rem 0.5rem;
+    @include for-services{
+        width: 100%;
+        max-width: 60%;
+    }
+    @include tablet{
+        max-width: 65%;
+    }
+    @include small-tablet{
+        max-width: 75%;
+    }
+
+    @include large-mobile-for-slider{
+        max-width: 85%;
+    }
+    @include mini-mobile-for-footer{
+        max-width: 95%;
     }
 
 
 }
 
-.services__inner__wrapper__item__list {
+.services__inner__wrapper__item__list{
     display: flex;
     flex-direction: column;
     text-align: center;
-
     
     @include large-desktop{
-        max-width: 44rem;
+       // padding: 0 2rem;
+        //max-width: 44rem;
+    }
+}
+
+.servises__inner__wrapper__item__list__border{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+    border-right: 1px solid $light-color; 
+
+    &--last{
+        border: none;
+    }
+
+    @include for-mefium-desktop-servise{
+        border: none;
     }
 }
 
@@ -89,14 +123,15 @@
 }
 
 .services__inner__wrapper__item__list__text {
-    max-width: 49.3rem;
+    // max-width: 49.3rem;
     flex-grow: 1;
-    text-align: left;
+    text-align: center;
     font-family: 'RobotoFlex';
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 2.8rem;
-    margin: 0 auto 6rem;
+    margin: 0 auto 3rem;
+    padding:  0 1rem;
 
     &--last{
         padding-left: 4rem;
@@ -106,7 +141,7 @@
         color: $accent-color;
     }
     @include large-desktop{
-        max-width: 44rem;
+        // max-width: 44rem;
         margin-right: 1rem;
         font-size: 2.2rem;
         text-align: center;
@@ -121,6 +156,7 @@
 .services__inner__wrapper__item__list__ul {
     list-style:disc;
     list-style-position: inside;
+    // padding:  0 1rem;
 }
 
 .services__inner__wrapper__item__list__ul__item {

@@ -7,125 +7,11 @@ import { particleJS } from "./particle";
 import { alertButton } from "./alert";
 import { buttonOrder, popupCancel } from "./buttonOrder";
 import { neonPartners } from "./neonPartners";
-import Vivus from "vivus";
+
 import { burger } from "./burger";
+import { VivusLines } from "./VivusJSLines";
 
 
-// =================vivus================
-
-// Here, the ease animation will be use for the global drawing.
-const lineLeft = new Vivus(
-    'svg__line__left',
-    {
-        type: 'delayed',
-        duration: 200,
-        animTimingFunction: Vivus.EASE,
-        start: 'manual'
-    },
-);
-
-const lineRight = new Vivus(
-    'svg__line__right',
-    {
-        type: 'delayed',
-        duration: 200,
-        animTimingFunction: Vivus.EASE,
-        start: 'manual'
-    },
-);
-
-const lineCenter = new Vivus(
-    'svg__line__center',
-    {
-        type: 'delayed',
-        duration: 200,
-        animTimingFunction: Vivus.EASE,
-        start: 'manual'
-    },
-);
-
-function playLineLeft() {
-    lineLeft.stop().reset().play();
-}
-function playLineCenter() {
-    lineCenter.stop().reset().play();
-}
-function playLineRight() {
-    lineRight.stop().reset().play();
-}
-function removeAnimation() {
-    lineRight.stop().reset();
-    lineLeft.stop().reset();
-    lineCenter.stop().reset();
-}
-function removeColorTitle() {
-    const title = document.querySelector('#section__news--title');
-    if (title.classList.contains('activeaccent')) {
-        title.classList.remove('activeaccent');
-    }
-}
-
-function chooseNews() {
-    const screenWidth = window.innerWidth;
-    
-    if (screenWidth >= 1300){
-        const linesItem = document.querySelectorAll('#section__top__card');
-        const title = document.querySelector('#section__news--title');
-    
-        linesItem.forEach(element => {
-            element.addEventListener('click', () => {
-                //убираем active,если есть
-                linesItem.forEach(element => {
-                    if (element.classList.contains('active')) {
-                        element.classList.remove('active')
-                    }
-                });
-    
-                //устанавливаем новый active
-                element.classList.add('active');
-    
-                if (element.dataset.left === 'left') {
-                    //убираем анимацию
-                    removeAnimation();
-                    removeColorTitle();
-                    //добавляем анимацию и красимtitle
-                    playLineLeft();
-                    setTimeout(function () {
-                        title.classList.add('activeaccent');
-                    }, 2500)
-                }
-                else if (element.dataset.center === 'center') {
-                    //убираем анимацию
-                    removeAnimation();
-                    removeColorTitle();
-    
-                    //добавляем анимацию и красимtitle
-                    playLineCenter();
-                    setTimeout(function () {
-                        title.classList.add('activeaccent');
-                    }, 2500)
-                }
-                else if (element.dataset.right === 'right') {
-                    //убираем анимацию
-                    removeAnimation();
-                    removeColorTitle();
-    
-                    //добавляем анимацию и красимtitle
-                    playLineRight();
-                    setTimeout(function () {
-                        title.classList.add('activeaccent');
-                    }, 2500)
-                }
-            })
-        });
-    }
-
-   
-}
-
-
-
-// ================================
 
 function changeColor() {
     let buttons = document.querySelectorAll('[data-filter="servises"]');
@@ -149,14 +35,32 @@ $('.slick-slider').slick({
     prevArrow: '<button type="button" class="slick-prev slide__right"></button>',
     nextArrow: '<button type="button" class="slick-next slide__left "></button>',
     dotsClass: 'slick-dots my-slick-dots',
+    adaptiveHeight: true,
+    infinite: false,
     responsive: [ // Позволяет задавать брэйкпоинты для слайдера
-
         {
-            breakpoint: 1288, // Указываем ширину экрана при которой срабатывает брэйкпоинт
+            breakpoint: 1550, // Указываем ширину экрана при которой срабатывает брэйкпоинт
+            settings: {
+                slidesToShow: 3,
+                centerMode: true,
+
+            }
+        },
+        {
+            breakpoint: 1485, // Указываем ширину экрана при которой срабатывает брэйкпоинт
+            settings: {
+                centerMode: false,
+                slidesToShow: 3
+
+            }
+        },
+        {
+            breakpoint: 1360, // Указываем ширину экрана при которой срабатывает брэйкпоинт
             settings: {
                 slidesToShow: 3
             }
         },
+  
         {
             centerMode: true,
             breakpoint: 992, // Указываем ширину экрана при которой срабатывает брэйкпоинт
@@ -171,17 +75,26 @@ $('.slick-slider').slick({
             settings: {
                 slidesToShow: 1,
                 centerMode: true,
-                arrows: false,
-                dots: true
+                // arrows: false,
+                // dots: true
             }
         },
         {
             breakpoint: 571, // Указываем ширину экрана при которой срабатывает брэйкпоинт
             settings: {
                 slidesToShow: 1,
-                arrows: false,
-                dots: true
+                // arrows: false,
+                // dots: true
                 //  centerMode: true,
+            }
+        },
+        {
+            breakpoint: 489, // Указываем ширину экрана при которой срабатывает брэйкпоинт
+            settings: {
+                slidesToShow: 1,
+                 arrows: false,
+                 dots: true,
+                //centerMode: true,
             }
         }
     ],
@@ -215,6 +128,8 @@ alertButton();
 buttonOrder();
 popupCancel();
 //вызов активной новости//карточки
-chooseNews();
+// chooseNews();
 //вызов бургера модалки и уведомлений
 burger();
+//
+VivusLines();

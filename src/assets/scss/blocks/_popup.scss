@@ -6,6 +6,8 @@
   top: 0;
   left: 0;
   display: none;
+  opacity: 0;
+  transition: all 0.5s linear;
 }
 
 .active {
@@ -15,53 +17,71 @@
 
 .popup__body {
   // min-height: 100%;
-  max-width: 40rem;
+  max-width: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 10px;
-  opacity: 0;
   transition: all 0.5s linear;
 
-  @include mobile {}
+  @include tablet {
+    max-width: 35rem;
+  }
 }
 
 .popup__form {
   background-color: #383838;
-  width: 400px;
+  width: 500px;
   padding: 20px;
   position: relative;
   border-radius: 20px;
   font-family: RobotoFlex;
 
+  
+
   @include mobile {
     width: 100%;
     max-width: 40rem;
-    min-width: 32rem;
+    min-width: 28rem;
   }
 }
 
 textarea {
   resize: none;
+  
 }
 
 .form__title {
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 32px;
   line-height: 130%;
   text-align: center;
   margin-top: 10px;
   color: #ffffff;
+  @include tablet {
+    font-size: 26px;
+  }
+  @include mobile{
+    font-size: 20px;
+  }
+
 }
 
 .form__subtitle {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 130%;
   text-align: center;
   margin-top: 10px;
   color: #ffffff;
   margin-bottom: 25px;
+  @include tablet {
+    font-size: 15px;
+  }
+  @include mobile{
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
 
 }
 
@@ -72,6 +92,10 @@ textarea {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  @include mobile{
+    width: 30px;
+    height: 30px;
+  }
 
   img {
     width: 100%;
@@ -82,45 +106,84 @@ textarea {
 .form__input-body {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 15px;
+  @include tablet {
+    row-gap: 6px;
+  }
 }
 
 .form__input {
   border: 1px solid #2DBE96;
   border-radius: 10px;
-  padding: 10px 5px;
+  padding: 14px 8px;
   //background-color: #383838;
-  background-color: $light-color;
+  background-color:#ffffff00;
+  font-size: 14px;
+  color: #ffffff;
+  @include tablet {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+  @include mobile {
+    font-size: 10px;
+    padding: 8px 6px;
+  }
 
   &::placeholder {
     color: #9c9c9c;
+    font-size: 14px;
+    @include tablet {
+      font-size: 12px;
+    }
+    @include mobile {
+      font-size: 10px;
+    }
+  
   }
+ 
+
 }
 
 textarea {
-  height: 90px;
+  height: 100px;
+  @include tablet {
+    height: 90px;
+  }
+  @include mobile {
+    height: 70px;
+  }
 }
+
+
 
 .form__button {
   // width: 100%;
   display: block;
-  margin: 0px auto;
   text-align: center;
   margin-top: 10px;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 0px;
   border-radius: 10px;
   background-color: #383838;
   border: 1px solid #2DBE96;
   color: #2DBE96;
-  min-width: 16rem;
+  min-width: 18rem;
+  @include tablet {
+    min-width: 14rem;
+  }
 
   @include mobile {
-    min-width: 13rem;
+    min-width: 12rem;
+    font-size: 12px;
+    padding: 8px 0px;
+  }
+  @include mobile {
+    min-width: 10rem;
+    font-size: 10px;
+    padding: 6px 0px;
   }
 
 }
-
 .form__buttons {
   display: flex;
   justify-content: space-between;

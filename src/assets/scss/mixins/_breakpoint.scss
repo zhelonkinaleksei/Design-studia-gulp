@@ -6,6 +6,12 @@
   }
 }
 
+@mixin for-services {
+  @media (max-width: (1050px)) {
+    @content;
+  }
+}
+
 @mixin for-mefium-desktop {
   @media (max-width: (1288px)) {
     @content;
@@ -31,6 +37,12 @@
 
 @mixin tablet {
   @media (max-width: (992px)) {
+    @content;
+  }
+}
+
+@mixin tablet-slider {
+  @media (max-width: (875px)) {
     @content;
   }
 }

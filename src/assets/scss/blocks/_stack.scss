@@ -16,7 +16,7 @@
     text-align: center;
     margin-bottom: 3.6rem;
 
-    @include small-tablet{
+    @include small-tablet {
         font-size: 4.5rem;
     }
 }
@@ -41,29 +41,33 @@
     border: 3px solid $light-color;
     border-radius: 2rem;
 
-    @include for-mefium-desktop-servise{
+    @include for-mefium-desktop-servise {
         max-width: 32rem;
         height: 32rem;
         overflow: hidden;
         border-width: 1px;
 
     }
-    @include for-mefium-desktop{
+
+    @include for-mefium-desktop {
         max-width: 28rem;
         height: 28rem;
         // border-radius: 5rem;
     }
-    @include for-desktop{
+
+    @include for-desktop {
         width: 100%;
         max-width: 22rem;
         height: 22rem;
     }
-    @include small-tablet{
+
+    @include small-tablet {
         width: 100%;
         max-width: 18rem;
         height: 18rem;
     }
-    @include mobile{
+
+    @include mobile {
         width: 100%;
         max-width: 12rem;
         height: 12rem;
@@ -72,152 +76,89 @@
 
 }
 
-.stack__svg {
-    fill: $light-color;
-    transition: all 0.4s linear;
-    max-width: 25rem;
-    max-height: 25rem;
-    display: block;
-
-    &:hover{
-        fill: $accent-color;
-    }
-
-    @include for-desktop{
-        width: 100%;
-        max-width: 20rem;
-        max-height: 20rem;
-    }
-
-    @include small-tablet{
-        width: 100%;
-        max-width: 15rem;
-        max-height: 15rem;
-    }
-    @include mobile{
-        width: 100%;
-        max-width: 10rem;
-        max-height: 10rem;
-    }
-}
-
-// .react--center{
+// .stack__svg {
 //     fill: $light-color;
 //     transition: all 0.4s linear;
+//     max-width: 25rem;
+//     max-height: 25rem;
+//     display: block;
+
+//     &:hover {
+//         fill: $accent-color;
+//     }
+
+//     @include for-desktop {
+//         width: 100%;
+//         max-width: 20rem;
+//         max-height: 20rem;
+//     }
+
+//     @include small-tablet {
+//         width: 100%;
+//         max-width: 15rem;
+//         max-height: 15rem;
+//     }
+
+//     @include mobile {
+//         width: 100%;
+//         max-width: 10rem;
+//         max-height: 10rem;
+//     }
 // }
 
-.accentsvg{
+
+.accentsvg {
     fill: $accent-color;
 }
 
-.stack__inner__list__item__react{
-    height: 25rem;
-    width: 25rem;
-    background-image: url(../images/stack/react.svg);
+
+.stack__inner__list__item__icon {
+    display: block;
+
+    &  > svg {
+        width: 25rem;
+        height: 25rem;
+    }
+
     @include bg-cover;
     transition: all 0.4s linear;
+    fill: white;
 
-    &:hover{
-        background-image: url(../images/stack/skill-icons_react-dark.svg);
+    &:hover {
+        fill: $accent-color;
     }
-    @include for-desktop{
+
+    @include for-desktop {
         width: 100%;
-        max-width: 20rem;
-        max-height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > svg{
+            width: 20rem;
+            height: 20rem;  
+        }
+
     }
 
-    @include small-tablet{
+    @include small-tablet {
         background-size: contain;
         width: 100%;
         max-width: 15rem;
         height: 15rem;
     }
-    @include mobile{
+
+    @include mobile {
         width: 100%;
         max-width: 10rem;
         height: 10rem;
     }
 }
 
-.stack__inner__list__item__psd{
-    height: 25rem;
-    width: 25rem;
-    background-image: url(../images/stack/mdi_phtshop.svg);
-    @include bg-cover;
-    transition: all 0.4s linear;
+.react{
+    stroke: white;
 
     &:hover{
-        background-image: url(../images/stack/simple-icons_adobephotoshop.svg);
-    }
-    @include for-desktop{
-        width: 100%;
-        max-width: 20rem;
-        max-height: 20rem;
-    }
-
-    @include small-tablet{
-        background-size: contain;
-        width: 100%;
-        max-width: 15rem;
-        height: 15rem;
-    }
-    @include mobile{
-        width: 100%;
-        max-width: 10rem;
-        height: 10rem;
-    }
-}
-.stack__inner__list__item__adobeXD{
-    height: 25rem;
-    width: 25rem;
-    background-image: url(../images/stack/adobeXD.svg);
-    @include bg-cover;
-    transition: all 0.4s linear;
-
-    &:hover{
-        background-image: url(../images/stack/logos_adobe-xd.svg);
-    }
-    @include for-desktop{
-        width: 100%;
-        max-width: 20rem;
-        max-height: 20rem;
-    }
-    @include small-tablet{
-        background-size: contain;
-        width: 100%;
-        max-width: 15rem;
-        height: 15rem;
-    }
-    @include mobile{
-        width: 100%;
-        max-width: 10rem;
-        height: 10rem;
-    }
-}
-.stack__inner__list__item__adobeAI{
-    height: 25rem;
-    width: 25rem;
-    background-image: url(../images/stack/AdobeAI.svg);
-    @include bg-cover;
-    transition: all 0.4s linear;
-
-    &:hover{
-        background-image: url(../images/stack/vscode-icons_file-type-ai.svg);
-    }
-    @include for-desktop{
-        width: 100%;
-        max-width: 20rem;
-        max-height: 20rem;
-    }
-    @include small-tablet{
-        background-size: contain;
-        width: 100%;
-        max-width: 15rem;
-        height: 15rem;
-    }
-    @include mobile{
-        width: 100%;
-        max-width: 10rem;
-        height: 10rem;
+        stroke: #2DBE96;
     }
 }

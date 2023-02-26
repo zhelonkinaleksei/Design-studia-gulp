@@ -4,18 +4,24 @@ export function alertButton() {
     const alert = document.querySelector('.alert');
     const arrayalertButton = document.querySelectorAll("#portfolio");
     const alertContent = document.querySelector('.alert__content');
+    const header = document.querySelector('.header');
     // console.log(arrayalertButton);
 
     arrayalertButton.forEach(alertButton => {
         if (alertButton) {
 
 
-            alertButton.addEventListener("click", function () {
+            alertButton.addEventListener("click", function (event) {
+                event.preventDefault();
                 alert.classList.add("_open-alert");
 
                 setTimeout(function () {
                     alert.style.opacity = "1";
                 }, 400)
+
+                if(header.classList.contains('activebg')){
+                    header.classList.remove('activebg');
+                }
             });
         };
 
